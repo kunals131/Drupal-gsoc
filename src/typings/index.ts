@@ -1,0 +1,1 @@
+export type CommonProperties<T, U> = Extract<keyof T, keyof U>;
