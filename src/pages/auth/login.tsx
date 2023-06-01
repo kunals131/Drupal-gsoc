@@ -22,7 +22,7 @@ const LoginPage = () => {
         <div className='mt-5'>
           <button className='bg-primary text-white rounded-md py-3 w-full'>Continue</button>
         </div>
-        <div className='mt-5 text-center text-gray-600'>Don't have an account? <span className='text-primary underline cursor-pointer'>Register Here</span></div>
+        <div className='mt-5 text-center text-gray-600'>Don{"'"}t have an account? <span className='text-primary underline cursor-pointer'>Register Here</span></div>
       </div>  
     </div>
   )
