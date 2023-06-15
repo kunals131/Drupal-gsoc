@@ -14,6 +14,9 @@ import {
 import { MdSearch } from "react-icons/md";
 import { FaBookOpen, FaRobot } from "react-icons/fa";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import { WhiteLogoPNG } from "@/utils/assets";
+import { BiLogOut } from "react-icons/bi";
 
 
 
@@ -43,7 +46,11 @@ const Sidebar = () => {
 
 
   return (
-    <div className="fixed z-[10000] top-0   scale-0 sm:scale-100 left-0 h-screen w-24 m-0 flex flex-col pt-36 bg-primary dark:bg-darkElevation-100 text-white shadow-lg">
+    <div className="fixed z-[10000] top-0   scale-0 sm:scale-100 left-0 h-screen w-24 m-0 flex flex-col items-center pt-8  bg-primary dark:bg-darkElevation-100 text-white shadow-lg">
+      <div className="w-[70px]">
+        <Image alt="logo" src={WhiteLogoPNG} />
+      </div>
+      <div className="mt-36"></div>
       <SideBarIcon
         link="/app"
         icon={<MdHome size="28" />}
@@ -57,7 +64,12 @@ const Sidebar = () => {
       <SideBarIcon icon={<FaBookOpen size="23" />} link="/app/my-courses" text="My Courses 📚" />
       <SideBarIcon icon={<MdLibraryAdd size="22" />} link="/app/course/create" text="Create Course ⚡" />
       {/* <SideBarIcon icon={<MdStorefront size="26" />} link="/" text="Store💊" /> */}
-      
+      <div className="mt-52">
+        <div className="w-[30px] hover:shadow-xl hover:bg-white transition-all hover:text-primary h-[30px] rounded-full flex items-center justify-between">
+        <BiLogOut size={24} className="cursor-pointer"/>
+
+        </div>
+      </div>
     </div>
   );
 };

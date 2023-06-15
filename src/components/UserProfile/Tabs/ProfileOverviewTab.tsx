@@ -23,7 +23,6 @@ const ProfileOverviewTab = () => {
                 </div>
                 <div className=''>
                     <div className='text-lg font-bold'>Resume</div>
-                  
                 </div>
             </div>
         </div>
