@@ -18,7 +18,7 @@ const Header = ({headerControl}:{
     headerControl ?: controlTypes
 }) => {
   return (
-    <div className='flex items-center justify-between px-8 border-b py-3'>
+    <div className='flex items-center justify-between h-[90px] px-8 border-b py-3'>
         <div className=''>
             <div className='flex items-center relative'>
                 <input placeholder='Search Projects, mentors..' className='rounded-lg placeholder:text-sm py-[10px] w-[400px] border p-2'/>
