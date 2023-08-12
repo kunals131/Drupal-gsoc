@@ -1,16 +1,10 @@
-import { DRUPAL_BASE_URL } from '@/utils/constants';
-import {DrupalClient} from 'next-drupal';
+import axios from 'axios';
 
-export const drupal = new DrupalClient(DRUPAL_BASE_URL!)
+export const drupal = axios.create({
+  baseURL: 'http://localhost/drupal/api',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  withCredentials : true
+});
 
-export const createAuthetnicatedDrupalClient = (username:string,password:string)=>{
-  return new DrupalClient(
-    DRUPAL_BASE_URL!,
-    {
-      auth: {
-        username,
-        password
-      }
-    }
-  )
-}
